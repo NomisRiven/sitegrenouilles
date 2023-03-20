@@ -1,3 +1,121 @@
+const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
 // const summoner_name_input = document.querySelector("#summoner-name-input");
 // const search_button = document.querySelector("#search-button");
@@ -88,48 +206,48 @@
 
 
 
-// // const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
-// // const summoner_name_input = document.querySelector("#summoner-name-input");
-// // const search_button = document.querySelector("#search-button");
-// // const results_table = document.querySelector("#results-table");
-// // const sort_button = document.querySelector("#sort-button");
-// // const csv_file_input = document.querySelector("#csv-file-input");
-// // const upload_button = document.querySelector("#upload-button");
-// // const csv_results_table = document.querySelector("#csv-results-table");
+// const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
+// const summoner_name_input = document.querySelector("#summoner-name-input");
+// const search_button = document.querySelector("#search-button");
+// const results_table = document.querySelector("#results-table");
+// const sort_button = document.querySelector("#sort-button");
+// const csv_file_input = document.querySelector("#csv-file-input");
+// const upload_button = document.querySelector("#upload-button");
+// const csv_results_table = document.querySelector("#csv-results-table");
 
-// // let players = [];
+// let players = [];
 
-// // // Function to search for a summoner
-// // function searchSummoner() {
-// //   const summoner_name = summoner_name_input.value;
-// //   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
-// //     .then(response => response.json())
-// //     .then(data => {
-// //       const id = data.id;
-// //       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
-// //         .then(response => response.json())
-// //         .then(data => {
-// //           const ranked_solo = data.find(queue => queue.queueType === "RANKED_SOLO_5x5");
-// //           if (ranked_solo) {
-// //             const lp = ranked_solo.leaguePoints;
-// //             const player = {
-// //               name: summoner_name,
-// //               lp: lp
-// //             };
-// //             players.push(player);
-// //             const row = results_table.insertRow();
-// //             const nameCell = row.insertCell();
-// //             const lpCell = row.insertCell();
-// //             nameCell.textContent = summoner_name;
-// //             lpCell.textContent = lp;
-// //           } else {
-// //             console.error("Summoner is not ranked in Solo Queue");
-// //           }
-// //         })
-// //         .catch(error => console.error(error));
-// //     })
-// //     .catch(error => console.error(error));
-// // }
+// // Function to search for a summoner
+// function searchSummoner() {
+//   const summoner_name = summoner_name_input.value;
+//   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       const id = data.id;
+//       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
+//         .then(response => response.json())
+//         .then(data => {
+//           const ranked_solo = data.find(queue => queue.queueType === "RANKED_SOLO_5x5");
+//           if (ranked_solo) {
+//             const lp = ranked_solo.leaguePoints;
+//             const player = {
+//               name: summoner_name,
+//               lp: lp
+//             };
+//             players.push(player);
+//             const row = results_table.insertRow();
+//             const nameCell = row.insertCell();
+//             const lpCell = row.insertCell();
+//             nameCell.textContent = summoner_name;
+//             lpCell.textContent = lp;
+//           } else {
+//             console.error("Summoner is not ranked in Solo Queue");
+//           }
+//         })
+//         .catch(error => console.error(error));
+//     })
+//     .catch(error => console.error(error));
+// }
 
 // // // Function to sort the players array
 
@@ -142,129 +260,137 @@
 
 
 
-// // const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
-// // const summoner_name_input = document.querySelector("#summoner-name-input");
-// // const search_button = document.querySelector("#search-button");
-// // const results_table = document.querySelector("#results-table");
-// // const sort_button = document.querySelector("#sort-button");
-// // const download_button = document.querySelector("#download-button");
+// const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
+// const summoner_name_input = document.querySelector("#summoner-name-input");
+// const search_button = document.querySelector("#search-button");
+// const results_table = document.querySelector("#results-table");
+// const sort_button = document.querySelector("#sort-button");
+// const download_button = document.querySelector("#download-button");
 
-// // let players = [];
+// let players = [];
 
-// // Papa.parse("players.csv", {
-// //   download: true,
-// //   header: true,
-// //   complete: function(results) {
-// //     players = results.data;
-// //   }
-// // });
+// Papa.parse("players.csv", {
+//   download: true,
+//   header: true,
+//   complete: function(results) {
+//     players = results.data;
+//   }
+// });
 
-// // search_button.addEventListener("click", () => {
-// //   const summoner_name = summoner_name_input.value;
-// //   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
-// //     .then(response => response.json())
-// //     .then(data => {
-// //       const id = data.id;
-// //       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
-// //         .then(response => response.json())
-// //         .then(data => {
-// //           const filteredData = data.filter(entry => entry.queueType === "RANKED_SOLO_5x5");
-// //           const lp = filteredData[0].leaguePoints;
-// //           const row = results_table.insertRow();
-// //           const nameCell = row.insertCell();
-// //           const lpCell = row.insertCell();
-// //           nameCell.textContent = summoner_name;
-// //           lpCell.textContent = lp;
-// //           players.push({
-// //             name: summoner_name,
-// //             lp: lp
-// //           });
-// //         })
-// //         .catch(error => console.error(error));
-// //     })
-// //     .catch(error => console.error(error));
-// // });
+// search_button.addEventListener("click", () => {
+//   const summoner_name = summoner_name_input.value;
+//   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       const id = data.id;
+//       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
+//         .then(response => response.json())
+//         .then(data => {
+//           const filteredData = data.filter(entry => entry.queueType === "RANKED_SOLO_5x5");
+//           const lp = filteredData[0].leaguePoints;
+//           const row = results_table.insertRow();
+//           const nameCell = row.insertCell();
+//           const lpCell = row.insertCell();
+//           nameCell.textContent = summoner_name;
+//           lpCell.textContent = lp;
+//           players.push({
+//             name: summoner_name,
+//             lp: lp
+//           });
+//         })
+//         .catch(error => console.error(error));
+//     })
+//     .catch(error => console.error(error));
+// });
 
-// // sort_button.addEventListener("click", () => {
-// //   players.sort((a, b) => b.lp - a.lp);
-// //   results_table.innerHTML = "<thead><tr><th>Pseudo</th><th>LP</th></tr></thead><tbody></tbody>";
-// //   for (let i = 0; i < players.length; i++) {
-// //     const row = results_table.insertRow();
-// //     const nameCell = row.insertCell();
-// //     const lpCell = row.insertCell();
-// //     nameCell.textContent = players[i].name;
-// //     lpCell.textContent = players[i].lp;
-// //   }
-// // });
+// sort_button.addEventListener("click", () => {
+//   players.sort((a, b) => b.lp - a.lp);
+//   results_table.innerHTML = "<thead><tr><th>Pseudo</th><th>LP</th></tr></thead><tbody></tbody>";
+//   for (let i = 0; i < players.length; i++) {
+//     const row = results_table.insertRow();
+//     const nameCell = row.insertCell();
+//     const lpCell = row.insertCell();
+//     nameCell.textContent = players[i].name;
+//     lpCell.textContent = players[i].lp;
+//   }
+// });
 
-// // download_button.addEventListener("click", () => {
-// //   let csv = "Pseudo,LP\n";
-// //   for (let i = 0; i < players.length; i++) {
-// //     csv += `${players[i].name},${players[i].lp}\n`;
-// //   }
-// //   const csvData = new Blob([csv], { type: "text/csv;charset=utf-8;" });
-// //   const link = document.createElement("a");
-// //   const url = URL.createObjectURL(csvData);
-// //   link.setAttribute("href", url);
-// //   link.setAttribute("download", "players.csv");
-// //   link.style.visibility = "hidden";
-// //   document.body.appendChild(link);
-// //   link.click();
-// //   document.body.removeChild(link);
-// // });
-
-
+// download_button.addEventListener("click", () => {
+//   let csv = "Pseudo,LP\n";
+//   for (let i = 0; i < players.length; i++) {
+//     csv += `${players[i].name},${players[i].lp}\n`;
+//   }
+//   const csvData = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+//   const link = document.createElement("a");
+//   const url = URL.createObjectURL(csvData);
+//   link.setAttribute("href", url);
+//   link.setAttribute("download", "players.csv");
+//   link.style.visibility = "hidden";
+//   document.body.appendChild(link);
+//   link.click();
+//   document.body.removeChild(link);
+// });
 
 
 
-// // const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
-// // const summoner_name_input = document.querySelector("#summoner-name-input");
-// // const search_button = document.querySelector("#search-button");
-// // const sort_button = document.querySelector("#sort-button");
-// // const results_table = document.querySelector("#results-table");
-// // let results = [];
 
-// // search_button.addEventListener("click", () => {
-// //   const summoner_name = summoner_name_input.value;
-// //   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
-// //     .then(response => response.json())
-// //     .then(data => {
-// //       const id = data.id;
-// //       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
-// //         .then(response => response.json())
-// //         .then(data => {
-// //           const lp = data[0].leaguePoints;
-// //           const result = {
-// //             name: summoner_name,
-// //             id: id,
-// //             lp: lp
-// //           };
-// //           results.push(result);
-// //           displayResults();
-// //         })
-// //         .catch(error => console.error(error));
-// //     })
-// //     .catch(error => console.error(error));
-// // });
 
-// // sort_button.addEventListener("click", () => {
-// //   results.sort((a, b) => b.lp - a.lp);
-// //   displayResults();
-// // });
 
-// // function displayResults() {
-// //   const tbody = results_table.querySelector("tbody");
-// //   tbody.innerHTML = "";
-// //   for (const result of results) {
-// //     const row = tbody.insertRow();
-// //     const nameCell = row.insertCell();
-// //     const idCell = row.insertCell();
-// //     const lpCell = row.insertCell();
-// //     nameCell.textContent = result.name;
-// //     idCell.textContent = result.id;
-// //     lpCell.textContent = result.lp;
-// //   }
-// // }
+
+
+
+
+
+//fonctionne mais pas sur les ranked mais sur flex+ranked
+
+// const api_key = "RGAPI-a9474894-4fb3-496f-89ff-0cc7f40b489a";
+// const summoner_name_input = document.querySelector("#summoner-name-input");
+// const search_button = document.querySelector("#search-button");
+// const sort_button = document.querySelector("#sort-button");
+// const results_table = document.querySelector("#results-table");
+// let results = [];
+
+// search_button.addEventListener("click", () => {
+//   const summoner_name = summoner_name_input.value;
+//   fetch(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summoner_name}?api_key=${api_key}`)
+//     .then(response => response.json())
+//     .then(data => {
+//       const id = data.id;
+//       fetch(`https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${id}?api_key=${api_key}`)
+//         .then(response => response.json())
+//         .then(data => {
+//           const lp = data[0].leaguePoints;
+//           const result = {
+//             name: summoner_name,
+//             id: id,
+//             lp: lp
+//           };
+//           results.push(result);
+//           displayResults();
+//         })
+//         .catch(error => console.error(error));
+//     })
+//     .catch(error => console.error(error));
+// });
+
+// sort_button.addEventListener("click", () => {
+//   results.sort((a, b) => b.lp - a.lp);
+//   displayResults();
+// });
+
+// function displayResults() {
+//   const tbody = results_table.querySelector("tbody");
+//   tbody.innerHTML = "";
+//   for (const result of results) {
+//     const row = tbody.insertRow();
+//     const nameCell = row.insertCell();
+//     const idCell = row.insertCell();
+//     const lpCell = row.insertCell();
+//     nameCell.textContent = result.name;
+//     idCell.textContent = result.id;
+//     lpCell.textContent = result.lp;
+//   }
+// }
 
 
 

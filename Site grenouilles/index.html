@@ -44,7 +44,6 @@
       <thead>
         <tr>
           <th>Pseudo</th>
-          <th> id</th>
           <th>LP</th>
         </tr>
       </thead>
@@ -75,7 +74,6 @@
                 <li><a href="mid.html">Mid</a></li>
                 <li><a href="bot.html">Bot</a></li>
                 <li><a href="sup.html">Support</a></li>
-                <!-- <li><a href="Atletouk.html">Atletouk</a></li> -->
               </ul>
             </nav>
           </div>
@@ -83,3 +81,40 @@
   </body>
   <img src="C:\Users\Simon\Desktop\code\Site grenouilles\IMG\unknown.png">
 </html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Site LP grenouilles</title>
+  <link rel="stylesheet" type="text/css" href="C:\Users\Simon\Desktop\code\Site grenouilles\CSS\style.css">
+  <link rel="shortcut icon" href="IMG/logo grenouilles.png" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html"><img src="IMG/logo grenouilles.png" alt="Logo LP grenouilles"></a>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
+      <script>
+        function arrayToTable(tableData) {
+          var table = $('<table></table>');
+          $(tableData).each(function (i, rowData) {
+            var row = $('<tr></tr>');
+            $(rowData).each(function (j, cellData) {
+              row.append($('<td>' + cellData + '</td>'));
+            });
+            table.append(row);
+          });
+          return table;
+        }
+
+        $.ajax({
+          type: "GET",
+          url: "C:\Users\Simon\Desktop\code\Site grenouilles\Ranking_Grenz_-_Feuille_1.csv",
+          success: function (data) {
+            $('body').append(arrayToTable(Papa.parse(data).data));
+          }
+        });
+      </script>
+
+</html> -->
