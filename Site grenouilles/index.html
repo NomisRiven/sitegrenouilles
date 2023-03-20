@@ -4,13 +4,25 @@
     <title>Titre de la page</title>
     <link rel="stylesheet" type="text/css" href="C:\Users\Simon\Desktop\code\Site grenouilles\CSS\style.css">
   </head>
-    <head>
-      <title>Mon site web</title>
-    </head>
-    <body>
-      <h1>Mon site web</h1>
-      <div id="result"></div>
-      <script src="C:\Users\Simon\Desktop\code\Site grenouilles\JS\script.js"></script>
-    </body>
-  </html>
-  
+  <body>
+    <div>
+      <label for="summoner-name-input">Entrez le nom d'utilisateur :</label>
+      <input type="text" id="summoner-name-input">
+      <button id="search-button">Rechercher</button>
+    </div>
+    <div id="id-result">ID du joueur :</div>
+    <table id="results-table">
+      <thead>
+        <tr>
+          <th>Pseudo</th>
+          <th>LP</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <button id="sort-button">Trier par LP</button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.1.0/papaparse.min.js"></script>
+    <script src="C:\Users\Simon\Desktop\code\Site grenouilles\JS\script.js"></script>
+  </body>
+</html>
