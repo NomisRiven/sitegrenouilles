@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Top - Site LP grenouilles</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="shortcut icon" href="IMG/logo grenouilles.png">
+    <!-- Ajouter l'en-tête commun -->
+    <link rel="import" href="header.html">
+    <!-- Inclure la bibliothèque Papa Parse -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  </head>
+  <body>
+    <header>
+        <div class="container">
+          <a href="index.html"><img src="IMG/logo grenouilles.png" alt="Logo LP grenouilles"></a>
+          <nav>
+            <ul>
+              <li><a href="top.html">Top</a></li>
+              <li><a href="jgl.html">Jungle</a></li>
+              <li><a href="mid.html">Mid</a></li>
+              <li><a href="bot.html">Bot</a></li>
+              <li><a href="sup.html">Support</a></li>
+            </ul>
+          </nav>
+        </div>
+    <!-- Ajouter le contenu de la page -->
+    <section class="top-page">
+      <div class="container">
+        <h1>Top Lane</h1>
+        <p class="description">Test tableau csv.</p>
+        <!-- Ajouter le tableau CSV -->
+        <div id="table-container"></div>
+      </div>
+    </section>
+
+    <!-- Inclure le script pour analyser le fichier CSV et afficher le tableau -->
+    <script>
+      // Charger le fichier CSV
+      Papa.parse("C:\Users\Simon\Desktop\code\Site grenouilles\Ranking_Grenz_-_Feuille_1.csv", {
+        download: true,
+        header: true,
+        complete: function(results) {
+          // Convertir les données en table HTML
+          var html = "<table>";
+          html += "<thead><tr>";
+          // Ajouter les en-têtes de colonnes
+          for (var i = 0; i < results.meta.fields.length; i++) {
+            html += "<th>" + results.meta.fields[i] + "</th>";
+          }
+          html += "</tr></thead>";
+          html += "<tbody>";
+          // Ajouter les données de chaque ligne
+          for (var i = 0; i < results.data.length; i++) {
+            html += "<tr>";
+            for (var j = 0; j < results.meta.fields.length; j++) {
+              html += "<td>" + results.data[i][results.meta.fields[j]] + "</td>";
+            }
+            html += "</tr>";
+          }
+          html += "</tbody></table>";
+          // Afficher le tableau dans le conteneur
+          document.getElementById("table-container").innerHTML = html;
+        }
+      });
+    </script>
+  </body>
+</html>
